@@ -27,6 +27,9 @@
     <ClCompile Include="uds\uds31.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="doip\doip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binary\BigEndian.h">
@@ -39,6 +42,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="uds\uds31.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doip\doip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doip\doip_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

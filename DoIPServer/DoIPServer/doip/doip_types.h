@@ -23,30 +23,21 @@ SOFTWARE.
 
 */
 
-#ifndef _UDS31_H_
-#define _UDS31_H_
-
-#include <stddef.h>
 #include <stdint.h>
 
-#include "uds_types.h"
+#define DOIP_GEN_HEADER_SIZE (8u)
+#define DOIP_DIAG_HEADER_SIZE (4u)
+#define DOIP_VER_INV_VER (0x02fdu)
 
-#define UDS31_GEN_REQ_MIN_LEN (3u)
+#define DOIP_GEN_HEADER_IDX_VER (0u)
+#define DOIP_GEN_HEADER_IDX_PLTYPE (2u)
+#define DOIP_GEN_HEADER_IDX_PLLEN (4u)
 
-#define UDS31_REQ_IDX_ROUTINE_CONTROL_TYPE (0u)
-#define UDS31_REQ_IDX_ROUTINE_ID (1u)
+#define DOIP_DIAG_HEADER_IDX_SRC_ADDR (0u)
+#define DOIP_DIAG_HEADER_IDX_TRGT_ADDR (2u)
 
-#define UDS31_ROUTINE_CONTROL_TYPE_START_ROUTINE (0u)
-#define UDS31_ROUTINE_CONTROL_TYPE_STOP_ROUTINE (1u)
-
-typedef bool (*RoutineHandlerType)(uint8_t, uint16_t);
-
-class Uds31 {
-  RoutineHandlerType func_routine_andler_;
-
- public:
-  Uds31(RoutineHandlerType handler);
-  void HandleRequest(uint8_t* data, size_t length);
-};
-
-#endif /* _UDS31_H_ */
+#define DOIP_PAYLOAD_TYPE_DIAGMSG (0x8001u)
+#define DOIP_PAYLOAD_TYPE_DOIPACK (0x8002u)
+#define DOIP_PAYLOAD_TYPE_DOIPNACK (0x8003u)
+#define DOIP_PAYLOAD_TYPE_RA_REQ (0x0005u)
+#define DOIP_PAYLOAD_TYPE_RA_RES (0x8006u)

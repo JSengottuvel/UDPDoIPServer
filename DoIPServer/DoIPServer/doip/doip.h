@@ -23,30 +23,26 @@ SOFTWARE.
 
 */
 
-#ifndef _UDS31_H_
-#define _UDS31_H_
+#ifndef _DOIP_H_
+#define _DOIP_H_
 
 #include <stddef.h>
 #include <stdint.h>
 
-#include "uds_types.h"
+#include "doip_types.h"
+#include "uds_server.h"
 
-#define UDS31_GEN_REQ_MIN_LEN (3u)
-
-#define UDS31_REQ_IDX_ROUTINE_CONTROL_TYPE (0u)
-#define UDS31_REQ_IDX_ROUTINE_ID (1u)
-
-#define UDS31_ROUTINE_CONTROL_TYPE_START_ROUTINE (0u)
-#define UDS31_ROUTINE_CONTROL_TYPE_STOP_ROUTINE (1u)
-
-typedef bool (*RoutineHandlerType)(uint8_t, uint16_t);
-
-class Uds31 {
-  RoutineHandlerType func_routine_andler_;
-
+class DoIP {
  public:
-  Uds31(RoutineHandlerType handler);
+  DoIP(uint16_t local_addr, uint16_t tester_Addr, UdsServer* udsServer);
   void HandleRequest(uint8_t* data, size_t length);
+
+ private:
+  void HandleDiagMsg(uint8_t* data, size_t length);
+  void HandleRaReq(uint8_t* data, size_t length);
+  uint16_t tester_addr_;
+  uint16_t local_addr_;
+  UdsServer* udsServer_;
 };
 
-#endif /* _UDS31_H_ */
+#endif /*_DOIP_H_*/

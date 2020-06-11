@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)DoIPServer\uds;$(SolutionDir)DoIPServer\binary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)DoIPServer\doip;$(SolutionDir)DoIPServer\uds;$(SolutionDir)DoIPServer\binary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,11 +142,14 @@
   <ItemGroup>
     <ClCompile Include="binary\BigEndian.cpp" />
     <ClCompile Include="DoIPServer.cpp" />
+    <ClCompile Include="doip\doip.cpp" />
     <ClCompile Include="uds\uds31.cpp" />
     <ClCompile Include="uds\uds_server.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binary\BigEndian.h" />
+    <ClInclude Include="doip\doip.h" />
+    <ClInclude Include="doip\doip_types.h" />
     <ClInclude Include="uds\uds31.h" />
     <ClInclude Include="uds\uds_server.h" />
     <ClInclude Include="uds\uds_types.h" />
