@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)DoIPServer\uds;$(SolutionDir)DoIPServer\binary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,9 +142,14 @@
   <ItemGroup>
     <ClCompile Include="binary\BigEndian.cpp" />
     <ClCompile Include="DoIPServer.cpp" />
+    <ClCompile Include="uds\uds31.cpp" />
+    <ClCompile Include="uds\uds_server.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binary\BigEndian.h" />
+    <ClInclude Include="uds\uds31.h" />
+    <ClInclude Include="uds\uds_server.h" />
+    <ClInclude Include="uds\uds_types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

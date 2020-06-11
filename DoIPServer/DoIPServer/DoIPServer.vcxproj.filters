@@ -21,9 +21,24 @@
     <ClCompile Include="binary\BigEndian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="uds\uds_server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uds\uds31.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binary\BigEndian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uds\uds_server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uds\uds_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uds\uds31.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
