@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/DoIPServer/Debug
+/DoIPServer/DoIPServer/Debug
+/DoIPServer/.vs
