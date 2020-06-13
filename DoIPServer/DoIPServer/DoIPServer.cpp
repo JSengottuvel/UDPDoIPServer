@@ -3,10 +3,10 @@
 
 #include <iostream>
 
-#include "BigEndian.h"
-#include "uds31.h"
-#include "uds_server.h"
-#include "doip.h"
+#include <binary/BigEndian.h>
+#include <uds/uds31.h>
+#include <uds/uds_server.h>
+#include <doip/doip.h>
 
 using namespace binary;
 

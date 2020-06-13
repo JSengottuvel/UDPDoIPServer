@@ -27,7 +27,7 @@ SOFTWARE.
 
 #include <stdint.h>
 
-#include "BigEndian.h"
+#include <binary/BigEndian.h>
 
 using namespace binary;
 

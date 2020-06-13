@@ -30,7 +30,7 @@ SOFTWARE.
 #include <stdint.h>
 
 #include "doip_types.h"
-#include "uds_server.h"
+#include <uds/uds_server.h>
 
 class DoIP {
  public:
